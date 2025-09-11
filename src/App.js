@@ -2,10 +2,10 @@ import "./App.css";
 import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
 import ExperienceItem from "./components/ExperienceItem";
-import React, { useState } from "react";
-import ProjectCard from "./components/ProjectCard";
+import React from "react";
 import Footer from "./components/Footer";
 import ShootingStarsParticles from "./components/ShootingStarsParticles";
+import ScrollMascot from "./components/ScrollMascot";
 
 const experiences = [
   {
@@ -80,7 +80,8 @@ function App() {
         <h2 className="text-3xl font-extrabold text-pinky5 mb-8 text-center">
           Experience
         </h2>
-        <div className="absolute left-1/2 top-24 -translate-x-1/2 h-[calc(100%-4rem)] w-1 bg-pinky4 z-0" />
+        <div id="experience-bar" className="hidden md:block absolute left-1/2 top-24 -translate-x-1/2 h-[calc(100%-4rem)] w-1 bg-pinky4 z-0" />
+  <ScrollMascot imgSrc="/hello-kitty.png" size={64} xOffset={14} alt="Hello Kitty" />
         <div className="relative z-10">
           {experiences.map((exp, idx) => (
             <ExperienceItem key={idx} {...exp} />
